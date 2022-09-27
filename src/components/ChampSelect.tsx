@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Champion from "./Champion";
+import styled from "styled-components";
 import axios from "axios";
 
 const API_URL = "http://localhost:3001/newgg";
@@ -28,7 +30,6 @@ interface Champs {
 }
 
 const ChampSelect = ({ role, category, changePage }: Props) => {
-  console.log("role: ", role, "category: ", category);
   const [champSelected, setChampSelected] = useState<boolean>(false);
   const [champions, setChampions] = useState<Champs[]>([]);
   const [chosenChamp, setChosenChamp] = useState<Champs>({ name: "" });
@@ -63,19 +64,61 @@ const ChampSelect = ({ role, category, changePage }: Props) => {
 
   return (
     <div>
-      <div onClick={() => pick(0)}>
-        {chosenIndex === 0 ? chosenChamp.name : "Champ 0"}
+      <h1 className="header">REVEAL YOUR CHAMPION</h1>
+      <div className="cardContainer">
+        <Card onClick={() => pick(0)}>
+          <Flex>
+            <Text>Click me!</Text>
+          </Flex>
+        </Card>
+
+        <Card onClick={() => pick(1)}>
+          <Flex>
+            <Text>Click me!</Text>
+          </Flex>
+        </Card>
+
+        <Card onClick={() => pick(2)}>
+          <Flex>
+            <Text>Click me!</Text>
+          </Flex>
+        </Card>
       </div>
-      <div onClick={() => pick(1)}>
-        {chosenIndex === 1 ? chosenChamp.name : "Champ 1"}
+
+      <div className="backbtn" onClick={() => changePage(3, "back")}>
+        <button className="btn">Back</button>
       </div>
-      <div onClick={() => pick(2)}>
-        {chosenIndex === 2 ? chosenChamp.name : "Champ 1"}
-      </div>
-      <div onClick={() => changePage(3, "back")}>Back</div>
-      <div onClick={undo}>Undo</div>
+
+      {champSelected && (
+        <Undo onClick={undo}>
+          <button className="btn">Undo</button>
+        </Undo>
+      )}
     </div>
   );
 };
 
 export default ChampSelect;
+
+const Card = styled.div`
+  border: 2px solid #b78846;
+  height: 40vh;
+  width: 15vw;
+  background: radial-gradient(#003, #000);
+  cursor: pointer;
+`;
+
+const Flex = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Text = styled.p`
+  color: white;
+`;
+
+const Undo = styled.div`
+  position: absolute;
+  top: 75vh;
+  left: 47vw;
+`;

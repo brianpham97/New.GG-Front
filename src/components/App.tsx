@@ -1,18 +1,7 @@
-import React, { useState, createContext } from "react";
+import React, { useState } from "react";
 import RoleSelect from "./RoleSelect";
 import CategorySelect from "./CategorySelect";
 import ChampSelect from "./ChampSelect";
-
-interface PageChanger {
-  changePage: (
-    page: number,
-    direction: "forward" | "back",
-    role?: any,
-    category?: any
-  ) => void;
-}
-
-const pager = createContext<PageChanger | null>(null);
 
 const App: React.FC = () => {
   const [page, setPage] = useState<number>(1);
@@ -22,7 +11,7 @@ const App: React.FC = () => {
   const changePage = (
     page: number,
     direction: "forward" | "back",
-    role: any,
+    role?: any,
     category?: any
   ): void => {
     if (page === 1) {
