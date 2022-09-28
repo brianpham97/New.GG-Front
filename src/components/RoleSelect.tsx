@@ -11,76 +11,84 @@ interface Page {
 }
 
 const RoleSelect = ({ changePage }: Page) => {
+  const top = (
+    <Card>
+      <Flex>
+        <button className="btn" onClick={() => changePage(1, "forward", "top")}>
+          Top
+        </button>
+        <Bullet>- Does nothing all game until like 20 minutes</Bullet>
+        <Bullet>- Never dies, ltierally unkillable</Bullet>
+      </Flex>
+    </Card>
+  );
+
+  const jungle = (
+    <Card>
+      <Flex>
+        <button
+          className="btn"
+          onClick={() => changePage(1, "forward", "jung")}
+        >
+          Jungle
+        </button>
+        <Bullet>- Gets flamed by everyone on the team</Bullet>
+        <Bullet>- Doesn't ganks any lanes, farms for next game</Bullet>
+      </Flex>
+    </Card>
+  );
+
+  const mid = (
+    <Card>
+      <Flex>
+        <button className="btn" onClick={() => changePage(1, "forward", "mid")}>
+          Mid
+        </button>
+        <Bullet>- Tells team to wait for the 0/10 power spike</Bullet>
+        <Bullet>
+          - Thinks they're the best player on the team, probably trash{" "}
+        </Bullet>
+      </Flex>
+    </Card>
+  );
+
+  const bot = (
+    <Card>
+      <Flex>
+        <button className="btn" onClick={() => changePage(1, "forward", "bot")}>
+          Bot
+        </button>
+        <Bullet>- Dies to just about everything in the game</Bullet>
+        <Bullet>- Won't get to play the game</Bullet>
+      </Flex>
+    </Card>
+  );
+
+  const support = (
+    <Card>
+      <Flex>
+        <button
+          className="btn"
+          onClick={() => changePage(1, "forward", "supp")}
+        >
+          Support
+        </button>
+        <Bullet>- Hides in the back cause they're scared to fight</Bullet>
+        <Bullet>- No one cares if you die, you're probably irrelevant</Bullet>
+      </Flex>
+    </Card>
+  );
   return (
     <div>
       <h1 className="header">SELECT YOUR ROLE</h1>
       <div className="cardContainer">
-        <Card>
-          <Flex>
-            <button
-              className="btn"
-              onClick={() => changePage(1, "forward", "top")}
-            >
-              Top
-            </button>
-            <Bullet>- Does nothing all game until like 20 minutes</Bullet>
-            <Bullet>- Never dies, ltierally unkillable</Bullet>
-          </Flex>
-        </Card>
-
-        <Card>
-          <Flex>
-            <button
-              className="btn"
-              onClick={() => changePage(1, "forward", "jung")}
-            >
-              Jungle
-            </button>
-            <Bullet>- Gets flamed by everyone on the team</Bullet>
-            <Bullet>- Loves big brain macro plays</Bullet>
-          </Flex>
-        </Card>
-
-        <Card>
-          <Flex>
-            <button
-              className="btn"
-              onClick={() => changePage(1, "forward", "mid")}
-            >
-              Mid
-            </button>
-            <Bullet>- Probably the one flaming the jungler most</Bullet>
-            <Bullet>- Thinks they're so cool with they play</Bullet>
-          </Flex>
-        </Card>
+        {top}
+        {jungle}
+        {mid}
       </div>
-
       <div className="cardContainer">
-        <Card>
-          <Flex>
-            <button
-              className="btn"
-              onClick={() => changePage(1, "forward", "bot")}
-            >
-              Bot
-            </button>
-            <Bullet>- Dies to just about everything in the game</Bullet>
-            <Bullet>- Won't get to play the game</Bullet>
-          </Flex>
-        </Card>
-
-        <Card>
-          <Flex>
-            <button
-              className="btn"
-              onClick={() => changePage(1, "forward", "supp")}
-            >
-              Support
-            </button>
-            <Bullet>- Hides in the back cause they're scared to fight</Bullet>
-            <Bullet>- INSERT SOMETHING LATER</Bullet>
-          </Flex>
-        </Card>
+        {bot}
+        {support}
       </div>
     </div>
   );
@@ -90,7 +98,7 @@ export default RoleSelect;
 
 const Card = styled.div`
   border: 2px solid #b78846;
-  height: 40vh;
+  height: 35vh;
   width: 15vw;
   background: radial-gradient(#003, #000);
 `;

@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +10,48 @@
 }
 
 body {
+  position: relative;
+  min-height: 100%;
   background-image: url("https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/uikit/backdrop-magic/backdrop-magic.png");
+}
+
+.GG {
+  color: #c9aa71;
 }
 
 .header {
   text-align: center;
   color: #c9aa71;
   text-shadow: 0 0 5px #ffffff80;
+  margin-top: 5px;
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  margin: 0 20px;
+  color: #c9aa71;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c9aa71;
+  transition: width 0.25s ease-out;
+}
+
+.link:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 5px #ffffff80;
+}
+
+.link:hover::before {
+  width: 100%;
 }
 
 .cardContainer {
@@ -22,21 +61,21 @@ body {
 }
 
 .cardTile {
-  border: 2px solid #b78846;
   height: 40vh;
   width: 15vw;
-  background: radial-gradient(#003, #000);
+  border: 2px solid #b78846;
+  background-color: radial-gradient(#003, #000);
 }
 
 .btn {
   font-size: 20px;
-  align-self: center;
-  /* font-weight: bold; */
+  font-weight: bold;
   letter-spacing: 1px;
+  align-self: center;
   padding: 5px 15px;
   margin-top: 8px;
-  background: #1c1e21;
   color: #c9aa71;
+  background-color: #1c1e21;
   box-shadow: inset 0 0 2px #000000;
   border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
   border-image-slice: 1;
@@ -53,6 +92,47 @@ body {
 
 .backbtn {
   position: absolute;
-  top: 75vh;
-  left: 2vw;
+  top: 85%;
+  left: 5vw;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 4;
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rune {
+  width: 65%;
+  height: 65%;
+  object-fit: cover;
+}
+
+.summ {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: radial-gradient(#003, #000);
 }
