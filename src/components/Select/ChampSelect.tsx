@@ -8,8 +8,8 @@ import axios from "axios";
 const API_URL = "http://localhost:3001/newgg";
 
 interface Props extends Page {
-  role: string;
-  category: string;
+  role: "top" | "jung" | "mid" | "bot" | "supp" | undefined;
+  category: "meta" | "thirst" | undefined;
 }
 
 interface Champs {

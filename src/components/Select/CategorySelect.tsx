@@ -4,13 +4,13 @@ import styled from "styled-components";
 
 const CategorySelect = ({ changePage }: Page) => {
   const metaCard = (
-    <MetaCard onClick={() => changePage(2, "forward", "", "meta")}>
+    <MetaCard onClick={() => changePage(2, "forward", undefined, "meta")}>
       <Button>Meta</Button>
     </MetaCard>
   );
 
   const thirstCard = (
-    <ThirstCard onClick={() => changePage(2, "forward", "", "thirst")}>
+    <ThirstCard onClick={() => changePage(2, "forward", undefined, "thirst")}>
       <Button>Thirst</Button>
     </ThirstCard>
   );

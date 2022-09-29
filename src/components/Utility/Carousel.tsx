@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 
 const API_URL = "http://localhost:3001/newgg";
 interface Props {
-  category: String;
+  category: "meta" | "thirst" | undefined;
 }
 
 interface Length {

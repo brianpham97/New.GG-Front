@@ -2,8 +2,8 @@ export interface Page {
   changePage: (
     page: number,
     direction?: "forward" | "back",
-    role?: any,
-    category?: any
+    role?: 'top' | 'jung' | 'mid' | 'bot' | 'supp' | undefined,
+    category?: "meta" | "thirst" | undefined
   ) => void;
 }
 
@@ -15,5 +15,5 @@ export interface Skin {
 export interface Attributes {
   name: string;
   num: number;
-  role: string;
+  role: 'top' | 'jung' | 'mid' | 'bot' | 'supp' | undefined
 }

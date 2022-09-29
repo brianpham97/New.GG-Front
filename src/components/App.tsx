@@ -7,14 +7,16 @@ import Footer from "./Utility/Footer";
 
 const App: React.FC = () => {
   const [page, setPage] = useState<number>(1);
-  const [role, setRole] = useState<string>("");
-  const [category, setCategory] = useState<string>("");
+  const [role, setRole] = useState<
+    "top" | "jung" | "mid" | "bot" | "supp" | undefined
+  >();
+  const [category, setCategory] = useState<"meta" | "thirst" | undefined>();
 
   const changePage = (
     page: number,
     direction?: "forward" | "back",
-    role?: any,
-    category?: any
+    role?: "top" | "jung" | "mid" | "bot" | "supp" | undefined,
+    category?: "meta" | "thirst" | undefined
   ): void => {
     if (page === 0) {
       setPage(1);
