@@ -1,25 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
+import { Attributes } from "../interface";
 
-interface Props {
-  name: string;
-  num: number;
-  role: string;
-  category: string;
-}
-
-interface Styles {
-  image?: string;
-  icon?: string;
-}
-
-const Champion = ({ name, num, role, category }: Props) => {
+const Champion = ({ name, num, role }: Attributes) => {
   const [keyStone, setKeyStone] = useState<string>("");
   const [spell, setSpell] = useState<string>("");
   const [modal, setModal] = useState<boolean>(false);
 
+  const ref: any = useRef();
+
   const openModal = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.clientY < 525) {
+    if (e.clientY < ref.current.clientHeight + 50) {
       setModal(true);
     }
   };
@@ -32,26 +23,31 @@ const Champion = ({ name, num, role, category }: Props) => {
     if (role === "top") {
       setKeyStone("7204_Resolve");
       setSpell("Teleport");
+      return;
     }
 
     if (role === "jung") {
       setKeyStone("7200_Domination");
       setSpell("Smite");
+      return;
     }
 
     if (role === "mid") {
       setKeyStone("7202_Sorcery");
       setSpell("Dot");
+      return;
     }
 
     if (role === "bot") {
       setKeyStone("7201_Precision");
       setSpell("Haste");
+      return;
     }
 
     if (role === "supp") {
       setKeyStone("7203_Whimsy");
       setSpell("Exhaust");
+      return;
     }
   }, []);
 
@@ -113,6 +109,7 @@ const Champion = ({ name, num, role, category }: Props) => {
       <Card
         image={`https://ddragon.leagueoflegends.com/cdn/img/champion/centered/${name}_${num}.jpg`}
         onClick={openModal}
+        ref={ref}
       >
         <Container>
           <ChampName>{name}</ChampName>
@@ -129,10 +126,15 @@ const Champion = ({ name, num, role, category }: Props) => {
 
 export default Champion;
 
-export const fadeIn = keyframes`
+const fadeIn = keyframes`
   0% {opacity: 0;}
   100% {opacity: 1;}
 `;
+
+interface Styles {
+  image?: string;
+  icon?: string;
+}
 
 const Card = styled.div<Styles>`
   display: flex;

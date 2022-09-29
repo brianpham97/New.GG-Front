@@ -1,14 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-interface Page {
-  changePage: (
-    page: number,
-    direction?: "forward" | "back",
-    role?: any,
-    category?: any
-  ) => void;
-}
+import { Page } from "../interface";
 
 const Navbar = ({ changePage }: Page) => {
   const links = (

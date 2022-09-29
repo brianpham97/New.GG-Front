@@ -1,37 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Champion from "./Champion";
 import Carousel from "../Utility/Carousel";
+import { Page, Skin } from "../interface";
 import styled from "styled-components";
 import axios from "axios";
 
 const API_URL = "http://localhost:3001/newgg";
 
-interface Params {
+interface Props extends Page {
   role: string;
   category: string;
-}
-
-interface Props extends Params {
-  changePage: (
-    page: number,
-    direction: "forward" | "back",
-    role?: any,
-    category?: any
-  ) => void;
-}
-
-interface Skin {
-  num: number;
-  name?: string;
 }
 
 interface Champs {
   name: string;
   skin: Skin;
-}
-
-interface Styles {
-  image: string;
 }
 
 const ChampSelect = ({ role, category, changePage }: Props) => {
@@ -122,12 +105,7 @@ const ChampSelect = ({ role, category, changePage }: Props) => {
   );
 
   const champDiv = (
-    <Champion
-      name={chosenChamp.name}
-      num={chosenChamp.skin.num}
-      role={role}
-      category={category}
-    />
+    <Champion name={chosenChamp.name} num={chosenChamp.skin.num} role={role} />
   );
 
   return (
@@ -146,6 +124,10 @@ const ChampSelect = ({ role, category, changePage }: Props) => {
 };
 
 export default ChampSelect;
+
+interface Styles {
+  image: string;
+}
 
 const Card = styled.div`
   height: 55vh;

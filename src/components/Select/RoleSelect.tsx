@@ -1,14 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-interface Page {
-  changePage: (
-    page: number,
-    direction: "forward" | "back",
-    role?: any,
-    category?: any
-  ) => void;
-}
+import { Page } from "../interface";
 
 const RoleSelect = ({ changePage }: Page) => {
   const top = (
@@ -33,7 +25,7 @@ const RoleSelect = ({ changePage }: Page) => {
           Jungle
         </button>
         <Bullet>- Gets flamed by everyone on the team</Bullet>
-        <Bullet>- Doesn't ganks any lanes, farms for next game</Bullet>
+        <Bullet>- Doesn't gank any lanes, farms for next game</Bullet>
       </Flex>
     </Card>
   );
@@ -78,6 +70,7 @@ const RoleSelect = ({ changePage }: Page) => {
       </Flex>
     </Card>
   );
+
   return (
     <div>
       <h1 className="header">SELECT YOUR ROLE</h1>

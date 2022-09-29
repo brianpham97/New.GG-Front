@@ -1,14 +1,6 @@
 import React from "react";
+import { Page } from "../interface";
 import styled from "styled-components";
-
-interface Page {
-  changePage: (
-    page: number,
-    direction: "forward" | "back",
-    role?: any,
-    category?: any
-  ) => void;
-}
 
 const CategorySelect = ({ changePage }: Page) => {
   const metaCard = (
