@@ -18,8 +18,10 @@ const Champion = ({ name, num, role, category }: Props) => {
   const [spell, setSpell] = useState<string>("");
   const [modal, setModal] = useState<boolean>(false);
 
-  const openModal = () => {
-    setModal(true);
+  const openModal = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.clientY < 525) {
+      setModal(true);
+    }
   };
 
   const closeModal = () => {
@@ -74,6 +76,18 @@ const Champion = ({ name, num, role, category }: Props) => {
     </RuneIcon>
   );
 
+  const guide = (
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href={`https://u.gg/lol/champions/${name.toLowerCase()}/build`}
+    >
+      <ChampIcon
+        icon={`http://ddragon.leagueoflegends.com/cdn/12.18.1/img/champion/${name}.png`}
+      />
+    </a>
+  );
+
   const summs = (
     <SummContainer>
       <SummIcon>
@@ -104,9 +118,7 @@ const Champion = ({ name, num, role, category }: Props) => {
           <ChampName>{name}</ChampName>
           <Content>
             {runes}
-            <ChampIcon
-              icon={`http://ddragon.leagueoflegends.com/cdn/12.18.1/img/champion/${name}.png`}
-            />
+            {guide}
             {summs}
           </Content>
         </Container>
@@ -146,11 +158,13 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   justify-content: space-around;
-  background-color: radial-gradient(#003, #000);
+  background: radial-gradient(#003, #000);
+  border-top: 2px solid #b78846; ;
 `;
 
 const ChampName = styled.h3`
   align-self: center;
+  font-size: 26px;
   margin-bottom: 4px;
   color: white;
 `;
@@ -168,12 +182,12 @@ const RuneIcon = styled.div<Styles>`
 `;
 
 const ChampIcon = styled.div<Styles>`
-  background: ${(props) => `url(${props.icon})`};
-  background-position: center;
-  background-size: cover;
   width: 45px;
   height: 45px;
   margin: 2px 0 4px 4px;
+  background: ${(props) => `url(${props.icon})`};
+  background-position: center;
+  background-size: cover;
   border: 2px solid #b78846;
   border-radius: 50%;
 `;

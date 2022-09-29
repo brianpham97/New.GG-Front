@@ -43,7 +43,10 @@ const Carousel = ({ category }: Props) => {
 
   return (
     <Slider>
-      <Container length={champs.length}>{map}</Container>
+      <Container length={champs.length * 2}>
+        {map}
+        {map}
+      </Container>
     </Slider>
   );
 };
@@ -51,12 +54,11 @@ const Carousel = ({ category }: Props) => {
 export default Carousel;
 
 const Slider = styled.div`
-  margin: auto;
   position: relative;
+  margin: auto;
+  width: 80%;
   display: grid;
   place-items: center;
-  width: 80%;
-  text-align: center;
   overflow: hidden;
 `;
 
@@ -65,7 +67,7 @@ const Scroll = (count: number) => keyframes`
     transform: translateX(0)
   }
   100% {
-    transform: translateX(calc(-45px * ${count / 2}))
+    transform: translateX(calc(-45px * ${count}))
   }
 `;
 
@@ -79,7 +81,7 @@ const Container = styled.div<Length>`
   background-size: cover;
   border: 1px solid #b78846;
   width: (${(props) => `calc(45px*${props.length})`});
-  animation: ${(props) => Scroll(props.length)} 60s linear infinite;
+  animation: ${(props) => Scroll(props.length)} 120s linear infinite;
   cursor: pointer;
   &:hover {
     animation-play-state: paused;
@@ -101,7 +103,7 @@ const ImgContainer = styled.div`
 `;
 
 const Icon = styled.img`
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 `;

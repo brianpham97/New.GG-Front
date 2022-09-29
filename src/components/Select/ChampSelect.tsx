@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Champion from "./Champion";
-import Carousel from "./Carousel";
+import Carousel from "../Utility/Carousel";
 import styled from "styled-components";
 import axios from "axios";
 
@@ -42,7 +42,7 @@ const ChampSelect = ({ role, category, changePage }: Props) => {
     skin: { num: 0 },
   });
   const [chosenIndex, setChosenIndex] = useState<number | null>(null);
-  const [icons, setIcons] = useState<String[]>([]);
+  const [icons, setIcons] = useState<String[]>(["1296", "1296", "1296"]);
 
   const undo = (): void => {
     setChampSelected(false);
@@ -151,7 +151,7 @@ const Card = styled.div`
   height: 55vh;
   width: 15vw;
   border: 2px solid #b78846;
-  background-color: radial-gradient(#003, #000);
+  background: radial-gradient(#003, #000);
   cursor: pointer;
 `;
 

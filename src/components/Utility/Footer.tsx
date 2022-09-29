@@ -9,7 +9,7 @@ const Footer = () => {
       rel="noopener noreferrer"
       href="https://github.com/brianpham97"
     >
-      <FaGithub />
+      <FaGithub className="icon" />
     </IconTag>
   );
 
@@ -19,7 +19,7 @@ const Footer = () => {
       rel="noopener noreferrer"
       href="https://www.linkedin.com/in/lbrian-phaml/"
     >
-      <FaLinkedin />
+      <FaLinkedin className="icon" />
     </IconTag>
   );
 
@@ -29,7 +29,7 @@ const Footer = () => {
       rel="noopener noreferrer"
       href="https://www.instagram.com/"
     >
-      <FaInstagram />
+      <FaInstagram className="icon" />
     </IconTag>
   );
 
@@ -55,4 +55,7 @@ const Container = styled.div`
 const IconTag = styled.a`
   text-decoration: none;
   color: #c9aa71;
+  &:hover {
+    text-shadow: 0 0 5px #ffffff80;
+  }
 `;

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
-import RoleSelect from "./RoleSelect";
-import CategorySelect from "./CategorySelect";
-import ChampSelect from "./ChampSelect";
-import Footer from "./Footer";
+import Navbar from "./Utility/Navbar";
+import RoleSelect from "./Select/RoleSelect";
+import CategorySelect from "./Select/CategorySelect";
+import ChampSelect from "./Select/ChampSelect";
+import Footer from "./Utility/Footer";
 
 const App: React.FC = () => {
   const [page, setPage] = useState<number>(1);

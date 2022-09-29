@@ -33,23 +33,26 @@ const Navbar = ({ changePage }: Page) => {
   );
 
   return (
-    <Container>
-      <Home onClick={() => changePage(0)}>
-        New<span className="GG">.GG</span>
-      </Home>
-      {links}
-    </Container>
+    <div>
+      <Container>
+        <Home onClick={() => changePage(0)}>
+          New
+          <span className="GG">.GG</span>
+        </Home>
+        {links}
+      </Container>
+    </div>
   );
 };
 
 export default Navbar;
 
-const Container = styled.div`
+const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: radial-gradient(#003, #000);
-  height: 8vh;
+  height: 6vh;
 `;
 
 const Home = styled.h2`
