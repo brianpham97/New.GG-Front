@@ -99,9 +99,9 @@ const ChampSelect = ({ role, category, changePage }: Props) => {
   );
 
   const undoBtn = (
-    <Undo onClick={undo}>
+    <div className="undobtn" onClick={undo}>
       <button className="btn">Undo</button>
-    </Undo>
+    </div>
   );
 
   const champDiv = (
@@ -157,10 +157,4 @@ const ChampIcon = styled.div<Styles>`
 
 const Text = styled.p`
   color: white;
-`;
-
-const Undo = styled.div`
-  position: absolute;
-  top: 85%;
-  right: 5vw;
 `;

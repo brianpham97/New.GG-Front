@@ -55,32 +55,10 @@ body {
   width: 100%;
 }
 
-.sideNav {
-  position: absolute;
-  /* right: 0; */
-  right: -100%;
-  height: 100px;
-  width: 100px;
-  background: red;
-  transition: 1s ease-in-out;
-}
-
-.sideNav.active {
-  right: 0;
-  transition: 1s ease-in-out;
-}
-
 .cardContainer {
   display: flex;
   justify-content: space-evenly;
   margin: 20px 0 25px 0;
-}
-
-.cardTile {
-  height: 40vh;
-  width: 15vw;
-  border: 2px solid #b78846;
-  background-color: radial-gradient(#003, #000);
 }
 
 .btn {
@@ -110,6 +88,12 @@ body {
   position: absolute;
   top: 85%;
   left: 5vw;
+}
+
+.undobtn {
+  position: absolute;
+  top: 85%;
+  right: 5vw;
 }
 
 .overlay {
