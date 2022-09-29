@@ -23,8 +23,8 @@ const Carousel = ({ category }: Props) => {
       .catch((err) => console.log(err));
   }, [category]);
 
-  const map = champs.map((champ, key: number) => {
-    const lowerCase = champ.toLowerCase();
+  const map = champs.map((champ: String, key: number) => {
+    const lowerCase: string = champ.toLowerCase();
     return (
       <ImgContainer key={key}>
         <a
