@@ -6,11 +6,13 @@ Developed a functional front-end application for users who are new to the game L
 
 ### Available Scripts
 
-## Technologies Used
-Starts application to main browser
+Rename `exampleconfig.ts` to `config.ts`. Then fill in the API URL with your server connection.\
+Start the application to main browser
 ```sh
 npm run start
 ```
+
+## Technologies Used
 
 ### Front End Development
 
