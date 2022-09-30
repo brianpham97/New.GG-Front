@@ -6,8 +6,13 @@ Developed a functional front-end application for users who are new to the game L
 
 ### Available Scripts
 
+Install required dependencies
+```sh
+npm install
+```
+
 Rename `exampleconfig.ts` to `config.ts`. Then fill in the API URL with your server connection.\
-Start the application to main browser
+Start the application to your main browser.
 ```sh
 npm run start
 ```
