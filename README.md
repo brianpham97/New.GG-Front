@@ -1,6 +1,7 @@
 # Overview
 
-...
+Developed a functional front-end application for users who are new to the game League of Legends and need help picking a champion to learn or for veteran players who want to look into a new champion to practice. Champions are sorted by either 'Meta' or 'Thirst'.\
+Meta champions were picked from [U.GG's](https://u.gg/lol/mid-lane-tier-list?rank=overall) S-S+ tier list and thirst champions list was picked by me 😛
 
 ## Technologies Used
 
