@@ -13,7 +13,7 @@ Champions are sorted by roles they are usually played in and categorized by eith
 </details>
 
 <details><summary>Champ Select</summary>
-\
+
 Champions are revealed by random and will refresh each time to give the player a surprise factor and more options.
 
 ![champ](https://user-images.githubusercontent.com/107714292/193191473-d3357da3-866f-48dd-b4bc-30e6580ce374.gif)
