@@ -4,6 +4,18 @@ Developed a functional front-end application for users who are new to the game L
 
 ### Demos
 
+<details><summary>Product Overview</summary>
+ 
+ ![select](https://user-images.githubusercontent.com/107714292/193191464-1ea01447-73a0-48c7-ad98-ea6f2b96e5d2.gif)
+
+</details>
+
+<details><summary>Questions & Answers</summary>
+  
+![champ](https://user-images.githubusercontent.com/107714292/193191473-d3357da3-866f-48dd-b4bc-30e6580ce374.gif)
+
+</details>
+
 ### Available Scripts
 
 Install required dependencies
