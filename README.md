@@ -5,17 +5,18 @@ Developed a functional front-end application for users who are new to the game L
 ### Demos
 
 <details><summary>Role and Category Select</summary>
- 
- Champions are sorted by roles they are usually played in and categorized by either 'Meta' or 'Thirst'. Meta champions were picked from [U.GG's](https://u.gg/lol/mid-lane-tier-list?rank=overall) S-S+ tier list (Patch 12.18, 9/27/2022). Thirst champions were picked by me 😛.
+```sh
+Champions are sorted by roles they are usually played in and categorized by either 'Meta' or 'Thirst'. Meta champions were picked from [U.GG's](https://u.gg/lol/mid-lane-tier-list?rank=overall) S-S+ tier list (Patch 12.18, 9/27/2022). Thirst champions were picked by me 😛.
+```
  
  ![select](https://user-images.githubusercontent.com/107714292/193191464-1ea01447-73a0-48c7-ad98-ea6f2b96e5d2.gif)
 
 </details>
 
 <details><summary>Champ Select</summary>
- 
+```sh
 Champions are revealed by random and will refresh each time to give the player a surprise factor and more options.
-  
+```
 ![champ](https://user-images.githubusercontent.com/107714292/193191473-d3357da3-866f-48dd-b4bc-30e6580ce374.gif)
 
 </details>
