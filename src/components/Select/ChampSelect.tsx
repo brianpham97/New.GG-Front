@@ -4,9 +4,7 @@ import Carousel from "../Utility/Carousel";
 import { Page, Skin } from "../interface";
 import styled from "styled-components";
 import axios from "axios";
-import { API_URL } from "../Utility/config";
-
-// const API_URL = "http://localhost:3001/newgg";
+import { API_URL } from "../config";
 
 interface Props extends Page {
   role: "top" | "jung" | "mid" | "bot" | "supp" | undefined;
