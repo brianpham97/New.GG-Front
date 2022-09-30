@@ -2,6 +2,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/src/components/Utility/config.ts
 
 # testing
 /coverage

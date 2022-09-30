@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "./config";
 import styled, { keyframes } from "styled-components";
 
-const API_URL = "http://localhost:3001/newgg";
 interface Props {
   category: "meta" | "thirst" | undefined;
 }
