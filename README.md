@@ -1,7 +1,7 @@
 # Overview
 
 Developed a functional front-end application for users who are new to the game League of Legends and need help picking a champion to learn or for veteran players who want to look into a new champion to practice.
-API coming from our [Backend](https://github.com/brianpham97/New.GG-Data)
+API coming from our [Backend](https://github.com/brianpham97/New.GG-Data).
 
 ## Demos
 
