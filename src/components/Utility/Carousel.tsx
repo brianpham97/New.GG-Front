@@ -67,7 +67,7 @@ const Scroll = (count: number) => keyframes`
     transform: translateX(0)
   }
   100% {
-    transform: translateX(calc(-45px * ${count}))
+    transform: translateX(-50%)
   }
 `;
 
@@ -81,7 +81,7 @@ const Container = styled.div<Length>`
   background-size: cover;
   border: 1px solid #b78846;
   width: (${(props) => `calc(45px*${props.length})`});
-  animation: ${(props) => Scroll(props.length)} 120s linear infinite;
+  animation: ${(props) => Scroll(props.length)} 40s linear infinite;
   cursor: pointer;
   &:hover {
     animation-play-state: paused;
